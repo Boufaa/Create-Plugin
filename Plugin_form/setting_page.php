@@ -8,7 +8,7 @@ if(isset($_POST['wphw_submit'])){
 function CREE(){
     
     $link = mysqli_connect("localhost", "root", "", "plugin");
-    $sql = "CREATE TABLE mm (id int NOT NULL PRIMARY KEY AUTO_INCREMENT, username varchar(255) NOT NULL, descriptions varchar(255) NOT NULL, Options varchar(255) NOT NULL)";
+    $sql = "CREATE TABLE plugin_table (id int NOT NULL PRIMARY KEY AUTO_INCREMENT, username varchar(255) NOT NULL, descriptions varchar(255) NOT NULL, Options varchar(255) NOT NULL)";
     $result = mysqli_query($link, $sql);
     return $result;
 
@@ -27,7 +27,7 @@ function insert(){
     }
     else
     {
-         $query="insert INTO mm (username,descriptions,Options)". "VALUES ('$username', '$descriptions', '$Options')";
+         $query="insert INTO plugin_table (username,descriptions,Options)". "VALUES ('$username', '$descriptions', '$Options')";
          $result=mysqli_query($link,$query);
     }
 }
@@ -47,20 +47,20 @@ function insert(){
     <div class="postbox">
     
       <form method="post" action="">
-      <table class="form-table">
+      <table class="form-table" style="margin-left: -210px;">
           <tr>
             <th scope="row"></th>
-            <td><input type="text" name="username" value="" style="width:400px;" placeholder="Nom d'utilisateur" /></td>
+            <td><label style="font-size: 20px;">utilisateur : &nbsp</label> <input type="text" name="username" value="" style="width:400px;" placeholder="" /></td>
           </tr>
 
           <tr>
             <th scope="row"></th>
-            <td><textarea name="descriptions" value="" style="width:400px;" placeholder="Description"></textarea></td>
+            <td><label style="font-size: 20px;">Description : </label> <textarea name="descriptions" value="" style="width:400px;" placeholder=""></textarea></td>
           </tr>
 
           <tr>
             <th scope="row"></th>
-            <td><select name="Options" style="width:400px;">
+            <td><label style="font-size: 20px;">Options : &nbsp &nbsp &nbsp </label> <select name="Options" style="width:400px;">
                 <option value="">--Select--</option>
                 <option name="OptionA" value="OptionA">Option A</option>
                 <option name="OptionB" value="OptionB">Option B</option>

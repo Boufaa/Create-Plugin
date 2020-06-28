@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: m&m
+Plugin Name: Plugin_form
 Description: extension de wordpress avec 2 sous menus 
 Version: 1.0
 Author: Hassan Boufaa
 Author URI: https://automattic.com/wordpressBrief3/
 License: GPLv2 or later
-Text Domain: m&m
+Text Domain: Plugin_form
 */
 ?>
 
@@ -24,7 +24,7 @@ function my_admin_menu () {
 	 //add a new setting page udner setting menu
     // add_management_page('Description', 'Description', 'manage_options',__FILE__,'Description_admin_page');
      //add new menu and its sub menu 
-    add_menu_page('Description title', 'm&m', 'manage_options','Description_page', 'Description_admin_page');
+    add_menu_page('Description title', 'Plugin_form', 'manage_options','Description_page', 'Description_admin_page');
     add_submenu_page( 'Description_page', 'Page title', 'Settings','manage_options', 'Settings', 'mt_settings_page');
    
     
