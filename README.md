@@ -12,21 +12,21 @@ steps to run this project
 
 
 ```
-create folder named m&m
+create folder named Plugin_form
 ```
 
 And
 ```
-copy and paste all files in The m&m folder created before
+copy and paste all files in The Plugin_form folder created before
 ```
 after that 
 ```
- copy m&m folder and past it in your wordpress instalation under this following path
+ copy Plugin_form folder and past it in your wordpress instalation under this following path
        wp-content\plugins
 ```
 finally
 ```
-activate the m&m plugin from dashboard
+activate the Plugin_form plugin from dashboard
 ```
 
 
