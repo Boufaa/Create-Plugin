@@ -38,6 +38,7 @@ function Description_admin_page () {
      an option list and a save button
   </p>
 </div>';
+include_once('affichage.php');
 }
 
 // mt_settings_page() displays the page content for the Test Settings submenu
